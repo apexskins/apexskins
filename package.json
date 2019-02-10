@@ -4,7 +4,8 @@
   "description": "An web application that renders Apex Legends skins as 3D models and allows users to view them",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "Tarik Eshaq, Steven Zhao, Ethan Tam, Jason Fan, Nathan Wu",
   "license": "ISC",
