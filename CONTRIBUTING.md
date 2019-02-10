@@ -2,7 +2,7 @@
 
 ### Issues
 
-[Create a github issue](https://github.com/apexskins/apexskins/issues) if you...
+[Create a github issue](https://github.com/apexskins/apexskins/blob/master/CONTRIBUTING.md) if you...
 
 - Think we need a new component or feature
 - Want to see an improvement to an existing component or feature
