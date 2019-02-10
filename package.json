@@ -5,11 +5,16 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "NODE_ENV=production node app.js",
+    "dev": "node app.js"
   },
   "author": "Tarik Eshaq, Steven Zhao, Ethan Tam, Jason Fan, Nathan Wu",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "ajv": "^6.8.1",
+    "express": "^4.16.4",
+    "next": "^7.0.2",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1"
   }
 }

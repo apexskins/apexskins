@@ -1,11 +1,26 @@
 const express = require('express');
-const app     = express();
+const next    = require('next');
 
-app.get('/', (request, response) => {
-    response.sendFile(__dirname + "/views/index.html");
-});
+const dev     = process.env.NODE_ENV !== 'production'
+const app     = next({ dev })
+const handle = app.getRequestHandler()
 
-// ========= Run server ==========
-app.listen(process.env.PORT || 8000, () => {
-    console.log("Listening on Port " + (process.env.PORT || 8000));
-});
+const PORT = process.env.PORT || 8000
+
+app.prepare()
+    .then(() => {
+        const server = express()
+
+        server.get('*', (req, res) => {
+            return handle(req, res)
+        })
+
+        server.listen(PORT, () => {
+            console.log(`> Ready on http://localhost:${PORT}`)
+        })
+
+    })
+    .catch((ex) => {
+        console.error(ex.stack)
+        process.exit(1)
+    })
